@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage("Build") {
       steps {
-        git url: 'https://github.com/bdthang/multi-module-maven-project'
+        // git url: 'https://github.com/bdthang/multi-module-maven-project'
         withMaven {
           sh "mvn clean package"
         } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
